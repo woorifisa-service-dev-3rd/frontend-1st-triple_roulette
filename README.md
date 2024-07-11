@@ -4,7 +4,10 @@
 <br />
 
 ## Service Introduction 👀
-gif 넣기
+### Main
+![main](./gif/main.gif)
+### Click button
+![click](./gif/버튼클릭.gif)
 <br /><br />
 
 ## Team JackPot 👥
@@ -17,7 +20,9 @@ gif 넣기
 
 ## Team Rules 💬
 ### 1. Code
-- class 명은 어쩌구저쩌구
+- class 명
+  - '-' 사용금지 '_'(언더바)로 통일하기
+  - 자식 클래스명에 앞에 부모 클래스명 꼭 붙히기 (ex) 'triple_header' -> 'triple_header_top')
 - prettier 사용하여 정렬 방식 통일
 ### 2. Branch
 - feature branch 에서 main branch 로 직접적인 pull request 금지
