@@ -16,13 +16,17 @@ gif 넣기
 <br />
 
 ## Team Rules 💬
-### 1️. Git
-#### feature branch 에서 main branch 로 직접적인 pull request 금지
-#### dev branch 로 pull request 시 적어도 1명의 승인이 있어야 merge 가능
-#### branch 이름은 feat/{service name}-{user name} 으로 통일
-### 2. Code
-#### class 명은 어쩌구저쩌구
-#### prettier 사용하여 정렬 방식 통일
+### 1. Code
+- class 명은 어쩌구저쩌구
+- prettier 사용하여 정렬 방식 통일
+### 2. Branch
+- feature branch 에서 main branch 로 직접적인 pull request 금지
+- dev branch 로 pull request 시 적어도 1명의 승인이 있어야 merge 가능
+- branch 이름은 feat/{service name}-{user name} 으로 통일
+### 3. Commit Message
+- 추가 `feat`
+- 변경 `fix`
+- 삭제 `remove`
 <br />
 
 ## UI Style Gide 💻
