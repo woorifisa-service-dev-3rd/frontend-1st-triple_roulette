@@ -46,6 +46,7 @@
 ### 2. Color Graph
 ![color](./gif/color.png)
 ### 3. Layout
+![layout](./gif/layout.png)
 ### 4. LightHouse
 #### 개선 전
 ![before](./gif/before.png)
