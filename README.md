@@ -24,19 +24,19 @@
 ## Team Rules 💬
 ### 1. Code
 - class 명
-  - '-'(하이픈) 사용금지 '_'(언더바)로 통일하기
+  - '-'(하이픈) 사용하지 않고 '_'(언더바)로 통일
   - 자식 클래스명에 앞에 부모 클래스명 꼭 붙이기 **(ex) 'triple_header' -> 'triple_header_top'**
 - prettier 사용하여 정렬 방식 통일
 ### 2. Branch
 - feature branch 에서 main branch 로 직접적인 pull request 금지
 - dev branch 로 pull request 시 적어도 1명의 승인이 있어야 merge 가능
-- branch 이름은 feat/{service name}-{user name} 으로 통일 **(ex) feat/button-qbobl5**
+- branch 이름은 feat/{feature name}-{user name} 으로 통일 **(ex) feat/button-qbobl5**
 ### 3. Commit Message
-* `feat` 새로운 기능 추가
-* `fix` 오류 수정
-* `docs` 문서 수정
-* `rename` 파일 혹은 폴더명 수정
-* `remove` 파일 삭제
+* `feat` (feature) 새로운 기능을 추가할 때 사용
+* `fix` 오류를 수정할 때 사용
+* `docs` 문서를 수정할 때 사용
+* `rename` 파일 혹은 폴더명을 수정할 때 사용
+* `remove` 파일을 삭제할 때 사용
 * **(ex) feat: button 추가**
 <br />
 
