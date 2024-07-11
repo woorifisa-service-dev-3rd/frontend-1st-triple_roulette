@@ -43,3 +43,8 @@
 ### 2. Color Graph
 ![color](./gif/color_palette.png)
 ### 3. Layout
+### 4. LightHouse
+#### 개선 전
+![before](./gif/before.png)
+#### 개선 후
+![after](./gif/after.PNG)
