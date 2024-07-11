@@ -1,6 +1,7 @@
 ## Triple Roulette 🎰
 > ‘Triple Roulette’은 **3개의 슬롯으로 이루어진 게임**으로, <br />
-각 슬롯을 멈추며 나오는 단어들을 조합해 **랜덤한 문장을 생성할 수 있는 웹 서비스**입니다.
+각 슬롯을 멈추며 나오는 단어들을 조합해 **랜덤한 문장을 생성할 수 있는 웹 서비스**입니다.<br />
+🔗 Demo: [Game Start!](https://woorifisa-service-dev-3rd.github.io/frontend-1st-triple_roulette/)
 <br />
 
 ## Service Introduction 👀
@@ -40,6 +41,8 @@
 
 ## UI Style Gide 💻
 ### 1. Font
+#### `Lobster`
+![font](./gif/font.png)
 ### 2. Color Graph
 ![color](./gif/color.png)
 ### 3. Layout
