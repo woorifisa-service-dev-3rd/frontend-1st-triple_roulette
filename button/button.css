@@ -1,0 +1,43 @@
+._board {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  position: relative;
+  padding: 20px;
+  height: 200px;
+  line-height: 200px;
+}
+
+._board_btn {
+  position: relative;
+}
+
+._board_btn_input {
+  display: none;
+}
+
+._board_btn_label {
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  width: 70px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px #7f0008, 0 5px 0 2px #7f0008, 0 12px 0 10px #dbab51,
+    0 12px 0 12px #c29849;
+  background: #9d060b;
+  cursor: pointer;
+}
+
+._board_btn_input:checked + ._board_btn_label {
+  -webkit-transform: translateX(-50%) translateY(calc(-50% + 5px));
+  transform: translateX(-50%) translateY(calc(-50% + 5px));
+  box-shadow: 0 0 0 2px #7f0008, 0 0px 0 2px #7f0008, 0 7px 0 10px #dbab51,
+    0 7px 0 12px #c29849;
+  z-index: 999;
+}
