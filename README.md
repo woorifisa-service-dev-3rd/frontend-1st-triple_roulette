@@ -41,4 +41,5 @@
 ## UI Style Gide 💻
 ### 1. Font
 ### 2. Color Graph
+![color](./gif/color_palette.png)
 ### 3. Layout
