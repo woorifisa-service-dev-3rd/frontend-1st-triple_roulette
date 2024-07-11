@@ -4,11 +4,12 @@
 <br />
 
 ## Service Introduction 👀
+### Intro
+![intro](./gif/intro.gif)
 ### Main
 ![main](./gif/main.gif)
 ### Click button
 ![click](./gif/버튼클릭.gif)
-![intro]()
 <br /><br />
 
 ## Team JackPot 👥
