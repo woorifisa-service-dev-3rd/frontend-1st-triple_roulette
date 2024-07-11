@@ -28,8 +28,8 @@
   - 자식 클래스명에 앞에 부모 클래스명 꼭 붙이기 **(ex) 'triple_header' -> 'triple_header_top'**
 - prettier 사용하여 정렬 방식 통일
 ### 2. Branch
-- feature branch 에서 main branch 로 직접적인 pull request 금지
-- dev branch 로 pull request 시 적어도 1명의 승인이 있어야 merge 가능
+- feature branch 에서 main branch 로 직접적인 pull request 요청 금지
+- dev branch 로 pull request 요청 시 적어도 1명의 승인이 있어야 merge 가능
 - branch 이름은 feat/{feature name}-{user name} 으로 통일 **(ex) feat/button-qbobl5**
 ### 3. Commit Message
 * `feat` (feature) 새로운 기능을 추가할 때 사용
