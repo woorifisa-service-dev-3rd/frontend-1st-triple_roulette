@@ -35,6 +35,7 @@
 * `feat` (feature) 새로운 기능을 추가할 때 사용
 * `fix` 오류를 수정할 때 사용
 * `docs` 문서를 수정할 때 사용
+* `refactor` 코드 리팩토링을 할 때 사용
 * `rename` 파일 혹은 폴더명을 수정할 때 사용
 * `remove` 파일을 삭제할 때 사용
 * **(ex) feat: button 추가**
