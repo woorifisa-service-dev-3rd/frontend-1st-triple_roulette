@@ -9,7 +9,7 @@
 ### Main
 ![main](./gif/main.gif)
 ### Click button
-![click](./gif/버튼클릭.gif)
+![click](./gif/button.gif)
 <br /><br />
 
 ## Team JackPot 👥
