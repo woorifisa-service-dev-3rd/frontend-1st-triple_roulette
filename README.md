@@ -8,6 +8,7 @@
 ![main](./gif/main.gif)
 ### Click button
 ![click](./gif/버튼클릭.gif)
+![intro]()
 <br /><br />
 
 ## Team JackPot 👥
@@ -29,9 +30,11 @@
 - dev branch 로 pull request 시 적어도 1명의 승인이 있어야 merge 가능
 - branch 이름은 feat/{service name}-{user name} 으로 통일
 ### 3. Commit Message
-- 추가 `feat`
-- 변경 `fix`
-- 삭제 `remove`
+* `feat` 새로운 기능 추가
+* `fix` 오류 수정
+* `docs` 문서 수정
+* `rename` 파일 혹은 폴더명 수정
+* `remove` 파일 삭제
 <br />
 
 ## UI Style Gide 💻
