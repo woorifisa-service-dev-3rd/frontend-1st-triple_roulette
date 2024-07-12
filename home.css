@@ -761,3 +761,7 @@
   height: 20%;
   background: linear-gradient(to bottom, #bb0715, #5b0105);
 }
+
+#toggle {
+    cursor: pointer;
+}
