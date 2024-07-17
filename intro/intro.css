@@ -24,8 +24,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0e082d;
-  color: transparent;
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
   font-family: "Inconsolata", monospace;
   width: 100vw;
   height: 100vh;

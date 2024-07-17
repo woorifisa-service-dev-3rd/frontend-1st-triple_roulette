@@ -1,3 +1,7 @@
+let engine;
+let wordBodies;
+let animationFrameId;
+
 const splitWords = () => {
   const textNode = document.querySelector(".intro_text");
   const text = textNode.textContent;
@@ -74,8 +78,8 @@ const renderCanvas = () => {
     const width = elemRef.offsetWidth;
     const height = elemRef.offsetHeight;
 
-    const initialVelocityX = Math.random() * 2 - 1; // 범위: -1에서 1 사이의 랜덤 값
-    const initialVelocityY = Math.random() * 2 + 1; // 범위: 1에서 3 사이의 랜덤 값
+    const initialVelocityX = Math.random() * 20 +  20; // 범위: -1에서 1 사이의 랜덤 값
+    const initialVelocityY = Math.random() * 10 + 10; // 범위: 1에서 3 사이의 랜덤 값
     const initialAngle = Math.random() * Math.PI * 0.5; // 0에서 2π(360도) 사이의 랜덤 각도
 
     return {
@@ -126,17 +130,40 @@ const renderCanvas = () => {
 
   document.addEventListener("click", (event) => {
     const introClick = document.querySelector(".intro_click");
-    const mainSection = document.querySelector(".main");
+    const dropSection = document.querySelector(".triple_wrap");
     if (introClick.style.display === "block") {
       World.remove(engine.world, [floor, wall1, wall2]);
       wordBodies.forEach((word) => {
         Matter.Body.setStatic(word.body, false);
       });
       introClick.style.opacity = "0";
-      mainSection.style.top = "0";
+      dropSection.style.top = "0";
+
+     
+      // Matter.js 엔진 삭제를 3초 후에 실행
+      setTimeout(() => {
+        clearMatterEngine(engine, wordBodies, animationFrameId);
+      }, 3000);
     }
   });
 };
+
+const clearMatterEngine = (engine, wordBodies, animationFrameId) => {
+  cancelAnimationFrame(animationFrameId)
+
+  Matter.Engine.clear(engine);
+  Matter.World.clear(engine.world, true)
+
+  wordBodies.forEach((word) => {
+    word.elem.remove();
+  });
+
+  // 엔진 러너가 실행 중인 경우 정지
+  if (engine.runner) {
+    Matter.Runner.stop(engine.runner);
+  }
+}
+
 
 window.addEventListener("DOMContentLoaded", (event) => {
   splitWords();
