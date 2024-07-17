@@ -7,6 +7,8 @@
   <title>Triple_Roulette</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="./js/btn_toggle.js"></script>
+  <script defer src="./js/modal.js"></script>
 </head>
 
 <body>
@@ -132,10 +134,32 @@
         <div class="triple_bottom_board_line"></div>
         <div class="triple_bottom_board_shadow"></div>
       </section>
+
+      <!-- modal section @qbobl5 -->
+      <div id="modal" class="modal">
+        <div class="modal_content">
+          <span class="modal_content_close">&times;</span>
+          <div class="modal_content_text">
+            <p class="modal_content_text_title">🎮 Game Rules 🎮</p>
+            <p class="modal_content_text_comment">
+              📍 주제 선택
+            </p>
+            <p class="modal_content_text_comment">
+              📍 돌아가는 슬롯을 버튼을 클릭하여 스톱!
+            </p>
+            <p class="modal_content_text_comment">
+              📍 토글을 내리면 재시작
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button id="open_modal">
+        <img src="./img/modal_btn.png" alt="Open Modal" class="modal_img">
+      </button>
     </div>
   </div>
 </body>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
