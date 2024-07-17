@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --board-height: 70px;
+  --board-width-ratio: 0.714;
+}
+
+
 .triple_wrap {
   position: relative;
   background-color: #0e082d;
@@ -81,7 +94,8 @@
   width: 100%;
   height: 65%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .triple_top_outside_text_left {
@@ -116,27 +130,29 @@
 }
 
 .triple_top_outside_text {
-  font-size: 70px;
-  font-family: "Lobster", sans-serif;
+  font-size: 4vw;
+  /* font-size: 70px; */
+  font-family:'DungGeunMo';
   font-weight: 400;
   font-style: normal;
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
+
 }
 
 @keyframes neon {
 
   0%,
   100% {
-    text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
-      0 0 10vw #fa1c16, 0 0 0.4vw #fed128, 0.5vw 0.5vw 0.1vw #806914;
+    text-shadow: 0 0 1px #fa1c16, 0 0 3px #fa1c16, 0 0 10px #fa1c16,
+      0 0 10px #fa1c16, 0 0 0.4px #fed128, 0.5px 0.5px 0.1px #806914;
     color: #fed128;
   }
 
   50% {
-    text-shadow: 0 0 0.5vw #800e0b, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
-      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    text-shadow: 0 0 0.5px #800e0b, 0 0 1.5px #800e0b, 0 0 5px #800e0b,
+      0 0 5px #800e0b, 0 0 0.2px #800e0b, 0.5px 0.5px 0.1px #40340a;
     color: #806914;
   }
 }
@@ -254,6 +270,7 @@
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+
 .triple_middle_outside_gold_box {
   width: 30%;
   height: 75%;
@@ -303,15 +320,15 @@
 }
 
 .triple_bottom_support {
-  width: 50%;
+  width: calc(50% - var(--board-height) * var(--board-width-ratio));
   height: 10%;
   background: linear-gradient(to bottom, #720b09, #900717, #bb0715);
 }
 
 .triple_bottom_board {
   border-bottom: 70px solid #bb0715;
-  border-left: calc(70px * 0.714) solid transparent;
-  border-right: calc(70px * 0.714) solid transparent;
+  border-left: calc(var(--board-height) * var(--board-width-ratio)) solid transparent;
+  border-right: calc(var(--board-height) * var(--board-width-ratio)) solid transparent;
   width: 70%;
   display: flex;
   justify-content: center;
