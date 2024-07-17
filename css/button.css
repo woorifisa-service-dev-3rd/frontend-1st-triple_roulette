@@ -24,7 +24,7 @@
     z-index: 3;
     transform: translateY(-50%);
     transition: 0.2s ease-in-out;
-    width: 100px;
+    width: 50%;   
     height: 30px;
     border-radius: 100%;
     box-shadow: 0 0 0 2px #7f0008, 0 5px 0 2px #7f0008, 0 12px 0 10px #dbab51,
