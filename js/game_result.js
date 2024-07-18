@@ -43,13 +43,13 @@ export function gameResultCheck() {
 
   if (gameResult === 1) {
     // 3가지 일치 and jackpot
-    resultArea.textContent = "🤑 jackpot 🤑";
+    resultArea.textContent = "🤑 JACKPOT 🤑";
     jackpotEvent();
   } else if (gameResult === 0) {
     // 3가지 일치 but not jackpot
-    resultArea.textContent = "🤗 Good!";
+    resultArea.textContent = "🤗 Good 🤗";
   } else if (gameResult === -1) {
     // 3가지 불일치
-    resultArea.textContent = "😂 Dud..";
+    resultArea.textContent = "😂 Dud 😂";
   }
 }
