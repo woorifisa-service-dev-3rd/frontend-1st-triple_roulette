@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
   const toggle = document.getElementById("toggle");
+  const toggleBulb = document.querySelector("._toggle_bulb_reflections");
+  const buttonLabelList = document.querySelectorAll("._board_btn_label");
 
   function checkButtons() {
     const allChecked = Array.from(buttonCheckboxes).every(
@@ -8,16 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     if (allChecked) {
       toggle.checked = false;
+      toggle.style.cursor = "pointer";
+      toggleBulb.style.cursor = "pointer";
+      
+      buttonLabelList[0].style.cursor = "default";
+      buttonLabelList[1].style.cursor = "default";
+      buttonLabelList[2].style.cursor = "default";
     } else {
       toggle.checked = true;
     }
   }
 
   buttonCheckboxes.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (e) {
       if (!this.checked) {
-        event.preventDefault();
+        e.preventDefault();
       } else {
+        console.log(e.target);
       }
     });
 
@@ -26,9 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  toggle.addEventListener("click", function () {
+  toggle.addEventListener("click", function (e) {
     if (!this.checked) {
-      event.preventDefault();
+      e.preventDefault();
+    } else {
+      toggle.style.cursor = "default";
+      toggleBulb.style.cursor = "default";
+      buttonLabelList[0].style.cursor = "pointer";
+      buttonLabelList[1].style.cursor = "pointer";
+      buttonLabelList[2].style.cursor = "pointer";
     }
   });
 
