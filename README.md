@@ -1,3 +1,11 @@
+## Team Member 👥
+| | 이름 | 맡은 역할 |
+| --- | --- | --- |
+| **팀장** | 김혜빈 | `Git` 관리<br/>`button` `toggle` 컴포넌트 구현 |
+| 팀원 | 류혜리 | `intro` 화면 구현 <br/>`transition action` 구현 |
+| 팀원 | 이도이 | `main` 화면 구현 <br/>`service` 소개 |
+<br />
+
 ## Triple Roulette 🎰
 > ‘Triple Roulette’은 **3개의 슬롯으로 이루어진 게임**으로, <br />
 각 슬롯을 멈추며 나오는 단어들을 조합해 **랜덤한 문장을 생성할 수 있는 웹 서비스**입니다.<br />
@@ -12,14 +20,6 @@
 ### Click button
 ![click](./gif/button.gif)
 <br /><br />
-
-## Team JackPot 👥
-| | 이름 | 맡은 역할 |
-| --- | --- | --- |
-| **팀장** | 김혜빈 | `Git` 관리<br/>`button` `toggle` 컴포넌트 구현 |
-| 팀원 | 류혜리 | `intro` 화면 구현 <br/>`transition action` 구현 |
-| 팀원 | 이도이 | `main` 화면 구현 <br/>`service` 소개 |
-<br />
 
 ## Team Rules 💬
 ### 1. Code
