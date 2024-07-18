@@ -12,7 +12,7 @@ export function gameResultCheck() {
   const topicDiv = document.querySelector("#triple_title");
   const topic = topicDiv.innerHTML;
   topicDiv.title = topic;
-  const resultList = document.querySelectorAll(".seven_img");
+  const resultList = document.querySelectorAll(".triple_middle_outside_gold_box_inner");
   const result1 = resultList[0].id;
   const result2 = resultList[1].id;
   const result3 = resultList[2].id;
@@ -21,7 +21,6 @@ export function gameResultCheck() {
    * 게임 결과 알고리즘
    */
   let gameResult = 0; // 최종 게임 결과
-  console.log(topic);
 
   if (result1 == result2 && result1 == result3) {
     if (topic == topicList[2] || topic == topicList[3]) {
