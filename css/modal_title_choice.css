@@ -1,10 +1,11 @@
-.triple_top_outside_text_inner:hover{
+.triple_top_outside_text_inner:hover {
     cursor: pointer;
 }
 
 /* 모달창 배경 */
 #modal_title_choice_wrap {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
+    /* 기본적으로 숨김 */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -12,37 +13,87 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); /* 배경을 반투명하게 */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 배경을 반투명하게 */
 }
 
-/* 모달창 내용 */
-.modal_title_choice_content{
+/* 모달창 내용 배경*/
+.modal_title_choice_content_wrap {
+    background: linear-gradient(to bottom,
+            #A9881A,
+            #896E1E 10%,
+            #6B5522 20%,
+            #4B3B25 30%,
+            #2D2129 50%,
+            #0E082D 90%);
     background-color: #A2010E;
     padding: 20px;
-    border: 15px solid #FAEDC3;
+    border: 5px solid #FAEDC3;
     border-radius: 20px;
     width: 65%;
     height: 57%;
-    position: absolute; /* 추가: 모달 창을 절대 위치로 설정 */
-    top: 50%; /* 추가: 화면의 세로 중앙에 위치 */
-    left: 50%; /* 추가: 화면의 가로 중앙에 위치 */
-    transform: translate(-50%, -50%); /* 추가: 모달 창을 정확히 중앙에 배치 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.title_choice_content_top_wrap{
+.title_choice_content_top_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-/* 닫기 버튼 */
-#modal_title_choice_close {
+.title_choice_subtitle {
+    font: 400 3vw 'DungGeunMo';
     color: #FAEDC3;
-    float: right;
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 13px;
+}
+
+/* 주제 선택 콘텐트 */
+.title_choice_content_middle_wrap {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_choice_content_middle {
+    padding: 10px 0px;
+    width: 80%;
+    height: fit-content;
+    text-align: center;
+}
+
+.title_choice_content_middle>p {
+    font: 400 1.8vw/60px 'DungGeunMo';
+    color: #FAEDC3;
+}
+
+.title_choice_content_middle>p:hover{
+    cursor: pointer;
+}
+
+
+
+.title_choice_content_bottom {
+    width: 98%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* 주제 선택 모달창 버튼 */
+.title_choice_content_bottom>p {
+    font: 400 1.5vw 'DungGeunMo';
+    color: #FAEDC3;
+}
+
+.title_choice_content_bottom>p:hover{
+    cursor: pointer;
 }
 
 .modal_title_choice_close:hover,

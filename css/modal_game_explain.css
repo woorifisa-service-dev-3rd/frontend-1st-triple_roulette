@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 .modal_game_explain {
   display: none;
   position: fixed;
@@ -7,30 +17,55 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
 
 .modal_game_explain_content {
+  background: linear-gradient(to bottom,
+      #A9881A,
+      #896E1E 10%,
+      #6B5522 20%,
+      #4B3B25 30%,
+      #2D2129 50%,
+      #0E082D 90%);
   background-color: #A2010E;
-  padding: 20px;
-  border: 15px solid #FAEDC3;
+  padding: 10px;
+  border: 5px solid #FAEDC3;
   border-radius: 20px;
   width: 65%;
   height: 57%;
-  position: absolute; /* 추가: 모달 창을 절대 위치로 설정 */
-  top: 50%; /* 추가: 화면의 세로 중앙에 위치 */
-  left: 50%; /* 추가: 화면의 가로 중앙에 위치 */
-  transform: translate(-50%, -50%); /* 추가: 모달 창을 정확히 중앙에 배치 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.modal_game_explain_content_top_wrap {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_game_explain_content_top_wrap>div{
+  width: 40px;
+}
+/* 게임 룰 */
+.modal_game_explain_content_text_title {
+  font: 400 2.4vw 'DungGeunMo';
+  color: #FAEDC3;
 }
 
 
+
 .modal_game_explain_content_close {
-  color: #FAEDC3;
-  float: right;
-  font-size: 50px;
-  font-weight: bold;
-  margin-right: 13px;
+    color: #FAEDC3;
+    font-size: 1.5vw;
+    font-weight: bold;
 }
 
 .modal_game_explain_content_close:hover,
@@ -66,19 +101,34 @@
 }
 
 .modal_game_explain_content_text {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: 600;
-  color:#FAEDC3;
-  cursor: default;
+  color: #FAEDC3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.modal_game_explain_content_text_title {
-  font-size: 3vw;
-  margin-left: 7%;
-}
 
 .modal_game_explain_content_text_comment {
-  margin-top: 60px;
-  font-size: 2vw;
+  font: 400 1.8vw/100px 'DungGeunMo';
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.modal_game_explain_content_text_comment>img {
+  height: 50px;
+}
+
+.modal_game_explain_bottom {
+  width: 98%;
+  text-align: center;
+  font: 400 1vw 'DungGeunMo';
+  color: #FAEDC3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_game_explain_bottom>div{
+  width: 50px;
 }

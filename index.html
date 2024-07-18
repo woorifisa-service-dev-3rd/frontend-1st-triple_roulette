@@ -139,18 +139,28 @@
       <!-- modal_game_explain section @qbobl5 -->
       <div id="modal_game_explain" class="modal_game_explain">
         <div class="modal_game_explain_content">
-          <span class="modal_game_explain_content_close">&times;</span>
+          <div class="modal_game_explain_content_top_wrap">
+            <p class="modal_game_explain_content_text_title">🎮게임 규칙🎮</p>
+          </div>
           <div class="modal_game_explain_content_text">
-            <p class="modal_game_explain_content_text_title">🎮 Game Rules 🎮</p>
-            <p class="modal_game_explain_content_text_comment">
-              📍 주제 선택
-            </p>
-            <p class="modal_game_explain_content_text_comment">
-              📍 돌아가는 슬롯을 버튼을 클릭하여 스톱!
-            </p>
-            <p class="modal_game_explain_content_text_comment">
-              📍 토글을 내리면 재시작
-            </p>
+            <div class="modal_game_explain_content_text_comment">
+              <p> I.원하는 주제를 선택해주세요.</p>
+              <img src="./img/modal_game_explain/title_choice_img.png">
+             
+            </div>
+            <div class="modal_game_explain_content_text_comment">
+              <p> II.돌아가는 슬롯의 버튼을 누르면 멈춰요.</p>
+              <img src="./img/modal_game_explain/button_img.png">
+            </div>
+            <div class="modal_game_explain_content_text_comment">
+              <p> III.버튼을 모두 누른 후 재시작을 원하면 토클을 눌러주세요.</p>
+              <img src="./img/modal_game_explain/toggle_img.png">
+            </div>
+          </div>
+          <div class="modal_game_explain_bottom">
+            <div></div>
+             <p>모두들 즐거운 게임되세요🤗</p>
+             <p class="modal_game_explain_content_close">닫기</p>
           </div>
         </div>
       </div>
@@ -161,21 +171,23 @@
 
       <!-- modal_title_choice section @doyi0107 -->
       <div id="modal_title_choice_wrap" class="modal">
-        <div class="modal_title_choice_content">
+        <div class="modal_title_choice_content_wrap">
           <div class="title_choice_content_top_wrap">
-            <div></div>
-            <div>💥원하는 주제를 선택해주세요</div>
-            <span id="modal_title_choice_close">&times;</span>
+            <div class="title_choice_subtitle" id="title_choice_subtitle">💥원하는 주제를 선택해주세요💥</div>
           </div>
           <div class="title_choice_content_middle_wrap">
-            <p>당신의 미래에 남편은?</p>
-            <p>당신의 미래에 연봉은?</p>
-            <p>숨겨둔 자산이 가장 많은 사람은?</p>
-            <p>그동안 연애를 가장 많이 한 사람은?</p>
-            <p>미래의 직업은?</p>
-            <p>닮은 사람은?</p>
-          </div>
+            <div class="title_choice_content_middle">
+              <p class="topic_choice">당신의 미래에 남편은?</p>
+              <p class="topic_choice">당신의 미래에 직업은?</p>
+              <p class="topic_choice">숨겨둔 자산이 가장 많은 사람은?</p>
+              <p class="topic_choice">연애를 가장 많이 한 사람은?</p>
+              <p class="topic_choice">닮은 사람은?</p>
+            </div>
 
+          </div>
+          <div class="title_choice_content_bottom">
+            <p id="modal_title_choice_close_btn">닫기</p>
+          </div>
         </div>
       </div>
 
