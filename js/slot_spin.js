@@ -66,11 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const topic = topicDiv.title;
       if (topic == "주제를 선택하세요") {
         e.preventDefault();
-      } else if (btn.id == -1 && !buttonCheckboxes[index].cheked) {
-        e.preventDefault();
       } else {
         const reel = reelsList[index];
-        btn.id = "-1";
         stopWithJerk(reel);
       }
     });
@@ -96,9 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         reel.style.animation = "spin 3s linear infinite";
         reel.style.animationPlayState = "running";
 
-        btns.forEach((btn) => {
-          btn.id = 0;
-        });
       });
     }
   });

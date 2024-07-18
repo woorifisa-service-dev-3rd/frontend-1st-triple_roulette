@@ -33,7 +33,9 @@ topicChoice.forEach((topic) => {
     const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
     const toggle = document.getElementById("toggle");
     const toggleBulb = document.querySelector("._toggle_bulb_reflections");
-    const buttonLabelList = document.querySelectorAll("._board_btn_label");
+    const buttonLabelList = document.querySelectorAll(
+      ".triple_bottom_board_btn"
+    );
 
     toggle.style.cursor = "default";
     toggleBulb.style.cursor = "default";
@@ -51,10 +53,6 @@ topicChoice.forEach((topic) => {
       reel.style.filter = "blur(5px)";
       reel.style.animation = "spin 3s linear infinite";
       reel.style.animationPlayState = "running";
-    });
-
-    buttonCheckboxes.forEach((button) => {
-      button.id = 0;
     });
   });
 });

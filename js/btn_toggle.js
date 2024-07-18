@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("toggle");
   const toggleBulb = document.querySelector("._toggle_bulb_reflections");
   const buttonLabelList = document.querySelectorAll("._board_btn_label");
+  const btns = document.querySelectorAll(".triple_bottom_board_btn");
 
   function checkButtons() {
     const allChecked = Array.from(buttonCheckboxes).every(
@@ -50,10 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonLabelList[0].style.cursor = "pointer";
       buttonLabelList[1].style.cursor = "pointer";
       buttonLabelList[2].style.cursor = "pointer";
-
-      buttonCheckboxes.forEach((btn) => {
-        btn.id = 0;
-      });
 
       const resultArea = document.querySelector("#triple_title");
       resultArea.textContent = resultArea.title;
