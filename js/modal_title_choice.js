@@ -3,7 +3,6 @@ const modalTitleOpen = document.getElementById("modal_title_choice_wrap");
 const modalTitleCloseButton = document.getElementById(
   "modal_title_choice_close_btn"
 );
-const textElement = document.querySelector(".triple_top_outside_text");
 // 모달 선택 버튼
 const topicChoice = document.querySelectorAll(".topic_choice");
 const tripleTitle = document.getElementById("triple_title");

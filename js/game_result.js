@@ -44,7 +44,7 @@ export function gameResultCheck() {
 
   if (gameResult === 1) {
     // 3가지 일치 and jackpot
-    resultArea.textContent = "🤑 jackpot 🤑";
+    resultArea.textContent = "🤑 JACKPOT 🤑";
     jackpotEvent();
   } else if (gameResult === 0) {
     // 3가지 일치 but not jackpot
