@@ -1,13 +1,10 @@
 @font-face {
-  font-family: 'DungGeunMo';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
-
-
-
 .modal_game_explain {
   display: none;
   position: fixed;
@@ -20,18 +17,19 @@
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
-
 .modal_game_explain_content {
-  background: linear-gradient(to bottom,
-      #A9881A,
-      #896E1E 10%,
-      #6B5522 20%,
-      #4B3B25 30%,
-      #2D2129 50%,
-      #0E082D 90%);
-  background-color: #A2010E;
+  background: linear-gradient(
+    to bottom,
+    #a9881a,
+    #896e1e 10%,
+    #6b5522 20%,
+    #4b3b25 30%,
+    #2d2129 50%,
+    #0e082d 90%
+  );
+  background-color: #a2010e;
   padding: 10px;
-  border: 5px solid #FAEDC3;
+  border: 5px solid #faedc3;
   border-radius: 20px;
   width: 65%;
   height: 57%;
@@ -43,98 +41,464 @@
   justify-content: space-around;
   flex-direction: column;
 }
-
 .modal_game_explain_content_top_wrap {
   width: 98%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.modal_game_explain_content_top_wrap>div{
+.modal_game_explain_content_top_wrap > div {
   width: 40px;
 }
 /* 게임 룰 */
 .modal_game_explain_content_text_title {
-  font: 400 2.4vw 'DungGeunMo';
-  color: #FAEDC3;
+  font: 400 2.4vw "DungGeunMo";
+  color: #faedc3;
 }
-
-
-
 .modal_game_explain_content_close {
-    color: #FAEDC3;
-    font-size: 1.5vw;
-    font-weight: bold;
+  color: #faedc3;
+  font-size: 1.5vw;
+  font-weight: bold;
 }
-
 .modal_game_explain_content_close:hover,
 .modal_game_explain_content_close:focus {
   color: #e1d6b1;
   text-decoration: none;
   cursor: pointer;
 }
-
 #open_modal_game_explain {
   position: fixed;
   top: 30px;
   right: 30px;
-  border: 2.5px solid #DBAB51;
+  border: 2.5px solid #dbab51;
   border-radius: 100%;
   background: none;
   width: 60px;
   height: 60px;
-  text-align: center;
-  line-height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   z-index: 100;
 }
-
 .modal_game_explain_img {
   width: 37px;
   height: 37px;
   transition: all 0.5s;
 }
-
 .modal_game_explain_img:hover {
   width: 40px;
   height: 40px;
-  margin-top: 8px;
 }
-
 .modal_game_explain_content_text {
-  color: #FAEDC3;
+  color: #faedc3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
 }
-
-
 .modal_game_explain_content_text_comment {
-  font: 400 1.5vw/50px 'DungGeunMo';
+  font: 400 1.5vw/30px "DungGeunMo";
   display: flex;
   justify-content: space-between;
   width: 90%;
   height: 23%;
   align-items: center;
+  /* margin-bottom: 10px; */
+  text-align: center;
 }
-
-/* .modal_game_explain_content_text_comment>img  {
-  width: fit-content;
-} */
-
-
-
+/* 이미지 크기 비율을 유지하면서 반응형으로 설정 */
+.modal_game_explain_content_text_comment:nth-child(1) img,
+.modal_game_explain_content_text_comment:nth-child(4) img {
+  width: 20%;
+  /* 1, 4번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(2) img,
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  width: 5%;
+  /* 2, 3번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  height: 100%;
+}
 .modal_game_explain_bottom {
   width: 98%;
   text-align: center;
-  font: 400 1vw 'DungGeunMo';
-  color: #FAEDC3;
+  font: 400 1vw "DungGeunMo";
+  color: #faedc3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
-.modal_game_explain_bottom>div{
+.modal_game_explain_bottom > div {
   width: 50px;
+}
+@media (max-width: 700px) {
+  #open_modal_game_explain {
+    width: 45px;
+    height: 45px;
+  }
+  .modal_game_explain_img {
+    width: 25px;
+    height: 25px;
+  }
+  .modal_game_explain_img:hover {
+    width: 30px;
+    height: 30px;
+  }
+  .modal_game_explain_bottom > div {
+    width: 30px;
+  }
+  .modal_game_explain_content_text_title {
+    font-size: 4vw;
+  }
+  .modal_game_explain_bottom > p,
+  .modal_game_explain_content_close {
+    font-size: 3vw;
+  }
+  /* 게임 설명 모달 미디어  */
+  .modal_game_explain_content_text_comment {
+    font: 400 3.5vw/30px "DungGeunMo";
+    text-align: left;
+  }
+  .modal_game_explain_content_text_comment > img {
+    display: none;
+  }
+}
+4: 23 @font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.modal_game_explain {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+.modal_game_explain_content {
+  background: linear-gradient(
+    to bottom,
+    #a9881a,
+    #896e1e 10%,
+    #6b5522 20%,
+    #4b3b25 30%,
+    #2d2129 50%,
+    #0e082d 90%
+  );
+  background-color: #a2010e;
+  padding: 10px;
+  border: 5px solid #faedc3;
+  border-radius: 20px;
+  width: 65%;
+  height: 57%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.modal_game_explain_content_top_wrap {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_game_explain_content_top_wrap > div {
+  width: 40px;
+}
+/* 게임 룰 */
+.modal_game_explain_content_text_title {
+  font: 400 2.4vw "DungGeunMo";
+  color: #faedc3;
+}
+.modal_game_explain_content_close {
+  color: #faedc3;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.modal_game_explain_content_close:hover,
+.modal_game_explain_content_close:focus {
+  color: #e1d6b1;
+  text-decoration: none;
+  cursor: pointer;
+}
+#open_modal_game_explain {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border: 2.5px solid #dbab51;
+  border-radius: 100%;
+  background: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+.modal_game_explain_img {
+  width: 37px;
+  height: 37px;
+  transition: all 0.5s;
+}
+.modal_game_explain_img:hover {
+  width: 40px;
+  height: 40px;
+}
+.modal_game_explain_content_text {
+  color: #faedc3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.modal_game_explain_content_text_comment {
+  font: 400 1.5vw/30px "DungGeunMo";
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 23%;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  text-align: center;
+}
+/* 이미지 크기 비율을 유지하면서 반응형으로 설정 */
+.modal_game_explain_content_text_comment:nth-child(1) img,
+.modal_game_explain_content_text_comment:nth-child(4) img {
+  width: 20%;
+  /* 1, 4번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(2) img,
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  width: 5%;
+  /* 2, 3번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  height: 100%;
+}
+.modal_game_explain_bottom {
+  width: 98%;
+  text-align: center;
+  font: 400 1vw "DungGeunMo";
+  color: #faedc3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal_game_explain_bottom > div {
+  width: 50px;
+}
+@media (max-width: 700px) {
+  #open_modal_game_explain {
+    width: 45px;
+    height: 45px;
+  }
+  .modal_game_explain_img {
+    width: 25px;
+    height: 25px;
+  }
+  .modal_game_explain_img:hover {
+    width: 30px;
+    height: 30px;
+  }
+  .modal_game_explain_bottom > div {
+    width: 30px;
+  }
+  .modal_game_explain_content_text_title {
+    font-size: 4vw;
+  }
+  .modal_game_explain_bottom > p,
+  .modal_game_explain_content_close {
+    font-size: 3vw;
+  }
+  /* 게임 설명 모달 미디어  */
+  .modal_game_explain_content_text_comment {
+    font: 400 3.5vw/30px "DungGeunMo";
+    text-align: left;
+  }
+  .modal_game_explain_content_text_comment > img {
+    display: none;
+  }
+}
+4: 23 @font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.modal_game_explain {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+.modal_game_explain_content {
+  background: linear-gradient(
+    to bottom,
+    #a9881a,
+    #896e1e 10%,
+    #6b5522 20%,
+    #4b3b25 30%,
+    #2d2129 50%,
+    #0e082d 90%
+  );
+  background-color: #a2010e;
+  padding: 10px;
+  border: 5px solid #faedc3;
+  border-radius: 20px;
+  width: 65%;
+  height: 57%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.modal_game_explain_content_top_wrap {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_game_explain_content_top_wrap > div {
+  width: 40px;
+}
+/* 게임 룰 */
+.modal_game_explain_content_text_title {
+  font: 400 2.4vw "DungGeunMo";
+  color: #faedc3;
+}
+.modal_game_explain_content_close {
+  color: #faedc3;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.modal_game_explain_content_close:hover,
+.modal_game_explain_content_close:focus {
+  color: #e1d6b1;
+  text-decoration: none;
+  cursor: pointer;
+}
+#open_modal_game_explain {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border: 2.5px solid #dbab51;
+  border-radius: 100%;
+  background: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+.modal_game_explain_img {
+  width: 37px;
+  height: 37px;
+  transition: all 0.5s;
+}
+.modal_game_explain_img:hover {
+  width: 40px;
+  height: 40px;
+}
+.modal_game_explain_content_text {
+  color: #faedc3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.modal_game_explain_content_text_comment {
+  font: 400 1.5vw/30px "DungGeunMo";
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 23%;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  text-align: center;
+}
+/* 이미지 크기 비율을 유지하면서 반응형으로 설정 */
+.modal_game_explain_content_text_comment:nth-child(1) img,
+.modal_game_explain_content_text_comment:nth-child(4) img {
+  width: 20%;
+  /* 1, 4번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(2) img,
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  width: 5%;
+  /* 2, 3번째 이미지 너비 조정 */
+}
+.modal_game_explain_content_text_comment:nth-child(3) img {
+  height: 100%;
+}
+.modal_game_explain_bottom {
+  width: 98%;
+  text-align: center;
+  font: 400 1vw "DungGeunMo";
+  color: #faedc3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal_game_explain_bottom > div {
+  width: 50px;
+}
+@media (max-width: 700px) {
+  #open_modal_game_explain {
+    width: 45px;
+    height: 45px;
+  }
+  .modal_game_explain_img {
+    width: 25px;
+    height: 25px;
+  }
+  .modal_game_explain_img:hover {
+    width: 30px;
+    height: 30px;
+  }
+  .modal_game_explain_bottom > div {
+    width: 30px;
+  }
+  .modal_game_explain_content_text_title {
+    font-size: 4vw;
+  }
+  .modal_game_explain_bottom > p,
+  .modal_game_explain_content_close {
+    font-size: 3vw;
+  }
+  /* 게임 설명 모달 미디어  */
+  .modal_game_explain_content_text_comment {
+    font: 400 3.5vw/30px "DungGeunMo";
+    text-align: left;
+  }
+  .modal_game_explain_content_text_comment > img {
+    display: none;
+  }
 }
