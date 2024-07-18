@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 #open_modal_game_explain {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 30px;
   border: 2.5px solid #dbab51;
@@ -403,7 +403,7 @@
   cursor: pointer;
 }
 #open_modal_game_explain {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 30px;
   border: 2.5px solid #dbab51;
