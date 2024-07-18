@@ -39,6 +39,8 @@
 * `rename` 파일 혹은 폴더명을 수정할 때 사용
 * `remove` 파일을 삭제할 때 사용
 * **(ex) feat: button 추가**
+
+### 4. ESlint 규칙 적용
 <br />
 
 ## UI Style Gide 💻
