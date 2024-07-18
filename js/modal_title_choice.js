@@ -30,7 +30,6 @@ topicChoice.forEach((topic) => {
     tripleTitle.textContent = event.target.textContent;
     tripleTitle.title = event.target.textContent;
 
-    const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
     const toggle = document.getElementById("toggle");
     const toggleBulb = document.querySelector("._toggle_bulb_reflections");
     const buttonLabelList = document.querySelectorAll("._board_btn_label");
@@ -53,8 +52,9 @@ topicChoice.forEach((topic) => {
       reel.style.animationPlayState = "running";
     });
 
+    const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
     buttonCheckboxes.forEach((button) => {
-      button.id = 0;
-    });
+      button.checked = false;
+    })
   });
 });
