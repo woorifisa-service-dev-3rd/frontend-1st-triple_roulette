@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
 @font-face {
-  font-family: 'DungGeunMo';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +10,6 @@
   --board-height: 70px;
   --board-width-ratio: 0.714;
 }
-
 
 .triple_wrap {
   position: relative;
@@ -25,7 +22,7 @@
   /* flex-direction: column; */
   top: -150vh;
   left: 0;
-  transition: all 3s ease;
+  /* transition: all 3s ease; */
 }
 
 .triple_wrap_inner {
@@ -35,18 +32,17 @@
   margin: 0 auto;
   top: 50%;
   transform: translate(0, -48%);
-  z-index: 1000;
+  z-index: 10;
 }
 
-.triple_wrap_background{
+.triple_wrap_background {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background:transparent;
-} 
-
+  background: transparent;
+}
 
 /* 위 */
 
@@ -102,8 +98,7 @@
   height: 80%;
   background-color: #fed128;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c,
-    0 0 13px 7px #a1664a;
+  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c, 0 0 13px 7px #a1664a;
 }
 
 /* 왼쪽, 오른쪽 형광 원 + text wrap */
@@ -127,10 +122,9 @@
 .triple_top_text_left_circle {
   width: 62%;
   height: 25%;
-  background-color: #fed128;
+  background-color: #fed128;  
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c,
-      0 0 13px 7px #a1664a;
+  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c, 0 0 13px 7px #a1664a;
 }
 
 .triple_top_outside_text_inner {
@@ -147,19 +141,15 @@
 }
 
 .triple_top_outside_text {
-  font-size: 4vw;
-  /* font-size: 70px; */
-  font-family:'DungGeunMo';
-  font-weight: 400;
-  font-style: normal;
+  text-align: center;
+  font: 400 2.4vw 'DungGeunMo';
+  /* color: #fed128; */
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
   -webkit-animation: neon 1s ease infinite;
-
 }
 
 @keyframes neon {
-
   0%,
   100% {
     text-shadow: 0 0 1px #fa1c16, 0 0 3px #fa1c16, 0 0 10px #fa1c16,
@@ -189,8 +179,7 @@
   background-color: #fed128;
   /* 노란 형광색 */
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c,
-      0 0 13px 7px #a1664a;
+  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c, 0 0 13px 7px #a1664a;
 }
 
 .triple_top_circle_bottom_wrap {
@@ -205,8 +194,7 @@
   height: 97%;
   background-color: #fed128;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c,
-      0 0 13px 7px #a1664a;
+  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c, 0 0 13px 7px #a1664a;
 }
 
 /* 중간 */
@@ -217,8 +205,6 @@
   width: 100%;
   height: 58%;
 }
-
-
 
 .triple_middle_inner {
   position: relative;
@@ -247,8 +233,7 @@
   background-color: #fed128;
   /* 노란 형광색 */
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 7px 5px #bca83c,
-    0 0 15px 9px #a1664a;
+  box-shadow: inset 0 0 0 4px #fdec6a, 0 0 7px 5px #bca83c, 0 0 15px 9px #a1664a;
 }
 
 .triple_middle_circle_right_wrap {
@@ -287,7 +272,6 @@
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-
 .triple_middle_outside_gold_box {
   width: 30%;
   height: 75%;
@@ -301,10 +285,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 150px;
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.2);
   /* 그림자 */
   color: #9f0f1c;
@@ -312,7 +292,6 @@
 }
 
 @keyframes sparkle {
-
   0%,
   100% {
     text-shadow: 0 0 3px #d15768, 0 0 6px #d15768, 0 0 9px #d15768,
@@ -344,8 +323,10 @@
 
 .triple_bottom_board {
   border-bottom: 70px solid #bb0715;
-  border-left: calc(var(--board-height) * var(--board-width-ratio)) solid transparent;
-  border-right: calc(var(--board-height) * var(--board-width-ratio)) solid transparent;
+  border-left: calc(var(--board-height) * var(--board-width-ratio)) solid
+    transparent;
+  border-right: calc(var(--board-height) * var(--board-width-ratio)) solid
+    transparent;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -374,40 +355,54 @@
   position: absolute;
 }
 
-.item1Box{
+.item1Box {
   bottom: 15px;
   left: 50px;
   width: 190px;
   height: 224px;
-  animation: motion 1s infinite alternate ;
+  animation: motion 1s infinite alternate;
 }
 
-.item1Box_img{
+.item1Box_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/coin.png');
-  background-size: cover; 
-  background-position: center; 
+  background-image: url("/img/coin.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.item2Box{
+.item2Box {
   bottom: 15px;
-  right:30px;
+  right: 30px;
   width: 200px;
   height: 210px;
-  animation: motion 1s infinite alternate ;
+  animation: motion 1s infinite alternate;
 }
 
-.item2Box_img{
+.item2Box_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/coin2.png');
-  background-size: cover; 
-  background-position: center; 
+  background-image: url("/img/coin2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#imageContainer {
+  position: relative;
+  width: 300px; /* 이미지 컨테이너의 너비 */
+  height: 300px; /* 이미지 컨테이너의 높이 */
+  overflow: hidden; /* 이미지 넘침 방지 */
+  transition: width 0.5s ease, height 0.5s ease; /* 변화를 부드럽게 만들기 위한 transition 효과 */
+}
+
+#expandingImage {
+  width: 100%; /* 이미지 초기 너비 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  transition: width 0.5s ease; /* 이미지 크기 변경을 부드럽게 만들기 위한 transition 효과 */
 }

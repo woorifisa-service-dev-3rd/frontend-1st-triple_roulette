@@ -1,6 +1,7 @@
 @import "./home.css";
 @import "./button.css";
 @import "./toggle.css";
-@import "./meida.css";
+@import "./media.css";
 @import "./reset.css";
-@import "./modal.css";
+@import "./modal_game_explain.css";
+@import "./modal_title_choice.css";
