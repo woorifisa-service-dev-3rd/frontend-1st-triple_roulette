@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonLabelList[1].style.cursor = "pointer";
       buttonLabelList[2].style.cursor = "pointer";
 
+      buttonCheckboxes.forEach((btn) => {
+        btn.id = 0;
+      });
+
       const resultArea = document.querySelector("#triple_title");
       resultArea.textContent = resultArea.title;
     }

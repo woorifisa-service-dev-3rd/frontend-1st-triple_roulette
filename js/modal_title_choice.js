@@ -41,8 +41,19 @@ topicChoice.forEach((topic) => {
     buttonLabelList[2].style.cursor = "pointer";
     toggle.checked = true;
 
+    const reelsList = document.querySelectorAll(
+      ".triple_middle_outside_gold_box_inner"
+    );
+
+    reelsList.forEach((reel) => {
+      reel.style.backgroundImage = `url("/img/slotreel.webp")`;
+      reel.style.filter = "blur(5px)";
+      reel.style.animation = "spin 3s linear infinite";
+      reel.style.animationPlayState = "running";
+    });
+
     buttonCheckboxes.forEach((button) => {
-      button.checked = false;
+      button.id = 0;
     });
   });
 });
