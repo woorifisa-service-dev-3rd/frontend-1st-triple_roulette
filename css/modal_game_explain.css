@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.modal_game_explain {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.modal_game_explain_content {
+  background: linear-gradient(to bottom,
+      #A9881A,
+      #896E1E 10%,
+      #6B5522 20%,
+      #4B3B25 30%,
+      #2D2129 50%,
+      #0E082D 90%);
+  background-color: #A2010E;
+  padding: 10px;
+  border: 5px solid #FAEDC3;
+  border-radius: 20px;
+  width: 65%;
+  height: 57%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.modal_game_explain_content_top_wrap {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_game_explain_content_top_wrap>div{
+  width: 40px;
+}
+/* 게임 룰 */
+.modal_game_explain_content_text_title {
+  font: 400 2.4vw 'DungGeunMo';
+  color: #FAEDC3;
+}
+
+
+
+.modal_game_explain_content_close {
+    color: #FAEDC3;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.modal_game_explain_content_close:hover,
+.modal_game_explain_content_close:focus {
+  color: #e1d6b1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#open_modal_game_explain {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border: 2.5px solid #DBAB51;
+  border-radius: 100%;
+  background: none;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 85px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.modal_game_explain_img {
+  width: 37px;
+  height: 37px;
+  transition: all 0.5s;
+}
+
+.modal_game_explain_img:hover {
+  width: 40px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.modal_game_explain_content_text {
+  color: #FAEDC3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.modal_game_explain_content_text_comment {
+  font: 400 1.5vw/50px 'DungGeunMo';
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 23%;
+  align-items: center;
+}
+
+/* .modal_game_explain_content_text_comment>img  {
+  width: fit-content;
+} */
+
+
+
+.modal_game_explain_bottom {
+  width: 98%;
+  text-align: center;
+  font: 400 1vw 'DungGeunMo';
+  color: #FAEDC3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_game_explain_bottom>div{
+  width: 50px;
+}

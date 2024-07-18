@@ -1,0 +1,41 @@
+.triple_bottom_board_btn_wrap {
+    position: absolute;
+    height: 50%;
+    /* 버튼 사이 간격 */
+    width: calc(60%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.triple_bottom_board_btn {
+    flex: 0 1 33%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+._board_btn_input {
+    display: none;
+}
+
+._board_btn_label {
+    margin: 0 auto;
+    display: block;
+    z-index: 3;
+    transform: translateY(-50%);
+    transition: 0.2s ease-in-out;
+    width: 50%;   
+    height: 30px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px #7f0008, 0 5px 0 2px #7f0008, 0 12px 0 10px #dbab51,
+        0 12px 0 12px #c29849;
+    background: #9d060b;
+    cursor: pointer;
+}
+
+._board_btn_input:checked+._board_btn_label {
+    transform: translateY(-45%);
+    box-shadow: 0 0 0 2px #7f0008, 0 0px 0 2px #7f0008, 0 7px 0 10px #dbab51,
+        0 7px 0 12px #c29849;
+    z-index: 999;
+}
