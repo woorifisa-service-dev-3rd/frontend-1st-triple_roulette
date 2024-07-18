@@ -29,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (e) {
       if (!this.checked) {
         e.preventDefault();
-      } else {
-        console.log(e.target);
-      }
+      } 
     });
 
     button.addEventListener("change", function () {

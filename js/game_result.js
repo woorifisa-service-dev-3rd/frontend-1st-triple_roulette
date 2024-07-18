@@ -3,6 +3,7 @@
  * (데이터 분리)
  */
 import { jackpotList } from "./jackpot_list_data.js";
+import { jackpotEvent } from "./jackpot_event.js";
 
 export function gameResultCheck() {
   /**
@@ -39,6 +40,7 @@ export function gameResultCheck() {
   if (gameResult === 1) {
     // 3가지 일치 and jackpot
     resultArea.textContent = "🤑 jackpot 🤑";
+    jackpotEvent();
   } else if (gameResult === 0) {
     // 3가지 일치 but not jackpot
     resultArea.textContent = "🤗 Good!";
