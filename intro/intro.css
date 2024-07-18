@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;900&display=swap");
+@font-face {
+  font-family: "EF_jejudoldam";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HSSaemaul-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Freesentation-9Black";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
+  font-family: "Inconsolata", monospace;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+* {
+  user-select: none;
+}
+canvas {
+  box-sizing: content-box;
+}
+.intro {
+  position: relative;
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+.word {
+  position: absolute;
+  cursor: grab;
+  font-size: 30px;
+  /* font-family: 'EF_jejudoldam'; */
+  font-family: 'HSSaemaul-Regular';
+  /* font-family: "Freesentation-9Black"; */
+
+  color: #edd799;
+}
+.word.highlighted {
+  font-weight: bold;
+  color: #9d060b;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 1rem;
+}
+
+.intro_click {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  color: white;
+  transition: opacity 1s ease;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -100vh;
+  left: 0;
+  position: absolute;
+  transition: all 1s ease;
+  /* background-color: green; */
+  background-color: #0e082d;
+}
+
+.imgBox{
+  width: 330px;
+  height: 300px;
+  position: absolute;
+}
+.imgBox.left{
+  left: 100px;
+  bottom: 100px;
+  /* transform: rotateX(30deg) rotateY(33deg); */
+}
+.imgBox.right{
+  right: 100px;
+  top: 100px;
+}
+.coinImg{
+  width: 100%;
+  height: 100%;
+
+}
+
+.leftCoin{
+  /* transform: perspective(200px) rotateX(-45deg); */
+  animation: motion 1s infinite alternate ;
+}
+
+@keyframes motion {
+  0%{
+    transform: translate(0,0);
+  }
+  100%{
+    transform: translate(0,10px);
+  }
+}

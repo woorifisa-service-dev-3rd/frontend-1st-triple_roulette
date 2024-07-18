@@ -1,22 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+
+
 .triple_wrap {
   position: relative;
-  background-color: #0e082d;
+  /* background-color: #0e082d; */
+  background: transparent;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  top: -150vh;
+  left: 0;
+  transition: all 3s ease;
 }
-
 .triple_wrap_inner {
   position: relative;
   width: 85%;
   height: 92%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -48%);
 }
+.triple_wrap_background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background:transparent;
+} 
+
+
+
+
 
 /* 위 */
 
@@ -764,4 +784,77 @@
 
 #toggle {
     cursor: pointer;
+}
+
+
+
+/* triple_wrap_background_item */
+.triple_wrap_background_item {
+  position: absolute;
+}
+
+.item1Box{
+  bottom: 15px;
+  left: 50px;
+  width: 190px;
+  height: 224px;
+  animation: motion 1s infinite alternate ;
+}
+
+.item1Box_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./coin.png');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.item2Box{
+  bottom: 15px;
+  right:30px;
+  width: 200px;
+  height: 210px;
+  animation: motion 1s infinite alternate ;
+}
+
+.item2Box_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./coin2.png');
+  background-size: cover; 
+  background-position: center; 
+}
+
+
+/* .item3Box{
+  bottom:0;
+  left: 80px;
+  width: 100px;
+  height: 116px;
+}
+.item3Box_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./chip2.png');
+  background-size: cover; 
+  background-position: center;
+} */
+
+
+@keyframes motion {
+  0%{
+    transform: translate(0,0);
+  }
+  100%{
+    transform: translate(0,10px);
+  }
 }

@@ -1,0 +1,84 @@
+.modal_game_explain {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.modal_game_explain_content {
+  background-color: #A2010E;
+  padding: 20px;
+  border: 15px solid #FAEDC3;
+  border-radius: 20px;
+  width: 65%;
+  height: 57%;
+  position: absolute; /* 추가: 모달 창을 절대 위치로 설정 */
+  top: 50%; /* 추가: 화면의 세로 중앙에 위치 */
+  left: 50%; /* 추가: 화면의 가로 중앙에 위치 */
+  transform: translate(-50%, -50%); /* 추가: 모달 창을 정확히 중앙에 배치 */
+}
+
+
+.modal_game_explain_content_close {
+  color: #FAEDC3;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 13px;
+}
+
+.modal_game_explain_content_close:hover,
+.modal_game_explain_content_close:focus {
+  color: #e1d6b1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#open_modal_game_explain {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border: 2.5px solid #DBAB51;
+  border-radius: 100%;
+  background: none;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 85px;
+  cursor: pointer;
+}
+
+.modal_game_explain_img {
+  width: 37px;
+  height: 37px;
+}
+
+.modal_game_explain_img:hover {
+  width: 40px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.modal_game_explain_content_text {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  color:#FAEDC3;
+  cursor: default;
+}
+
+.modal_game_explain_content_text_title {
+  font-size: 3vw;
+  margin-left: 7%;
+}
+
+.modal_game_explain_content_text_comment {
+  margin-top: 60px;
+  font-size: 2vw;
+}
