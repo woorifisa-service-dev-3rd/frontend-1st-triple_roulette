@@ -18,13 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function stopWithJerk(reel) {
     // 애니메이션 일시 중지
     reel.style.animationPlayState = "paused";
-
-    // 잠시 후 다시 재생 후 멈추기
-    setTimeout(() => {
-      reel.style.animation = "none"; // 기존 애니메이션 제거
-      // 잠시 후 다시 애니메이션 추가
-      setTimeout(() => {
-        reel.style.animation = "spin 0.2s ease-out"; // 짧은 시간 동안 느리게 회전
+    reel.style.animation = "none"; // 기존 애니메이션 제거
+    reel.style.animation = "spin 0.2s ease-out"; // 짧은 시간 동안 느리게 회전
 
         const topicList = [
           "당신의 미래에 배우자는?",
@@ -57,10 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         reel.style.backgroundImage = `url("${url}1.png")`;
         // reel.id = num;
         reel.id = 1;
+        console.log("ee");
         reel.style.animationPlayState = "paused"; // 멈추기
         reel.style.filter = "blur(0px)";
-      }, 20);
-    }, 50);
   }
 
   function checkButtons() {
