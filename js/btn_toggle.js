@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonLabelList[0].style.cursor = "pointer";
       buttonLabelList[1].style.cursor = "pointer";
       buttonLabelList[2].style.cursor = "pointer";
+
+      const resultArea = document.querySelector("#triple_title");
+      const topic = "우리 FISA 최대 아웃풋";
+      resultArea.textContent = topic;
     }
   });
 
