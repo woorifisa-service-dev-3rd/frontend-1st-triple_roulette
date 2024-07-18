@@ -1,9 +1,56 @@
 ## Team Member 👥
-| | 이름 | 맡은 역할 |
-| --- | --- | --- |
-| **팀장** | 김혜빈 | `Git` 관리<br/>`button` `toggle` 컴포넌트 구현 |
-| 팀원 | 류혜리 | `intro` 화면 구현 <br/>`transition action` 구현 |
-| 팀원 | 이도이 | `main` 화면 구현 <br/>`service` 소개 |
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/bw02184">
+        <b>팀장 김혜빈</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/seonmin5">
+        <b>팀원 류혜리</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SeungAh-Yoo99">
+        <b>팀원 이도이</b>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/qbobl5">
+        <img src="https://github.com/qbobl5.png" alt="김혜빈" width="170" height="160"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/hyeri1126">
+        <img src="https://github.com/hyeri1126.png" alt="류혜리" width="170" height="160"/>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/doyi0107">
+        <img src="https://github.com/doyi0107.png" alt="이도이" width="170" height="160"/>
+      </a>
+    </td>
+  </tr>
+   
+  <tr>
+    <td align="center">
+      깃 관리<br>
+      룰렛 스핀 알고리즘 구현<br>
+    </td>
+    <td align="center">
+      인트로 및 메인 배경 구현 <br>     
+      서비스 발표<br>
+    </td>
+    <td align="center">
+      메인 및 모달 UI 구현<br>
+      반응형 구현 
+    </td>
+  </tr>
+</table>
+
 <br />
 
 ## Triple Roulette 🎰
@@ -39,8 +86,29 @@
 * `rename` 파일 혹은 폴더명을 수정할 때 사용
 * `remove` 파일을 삭제할 때 사용
 * **(ex) feat: button 추가**
+### 4. ESlint 규칙
+```json
+{
+  "rules": {
+    "quotes": ["error", "single"], 
+    "semi": ["error", "always"], 
+    "no-console": "warn", 
+    "prefer-const": "error", 
+    "no-multiple-empty-lines": ["error", { "max": 1 }], 
+  }
+}
+```
+- `quotes`
+  - **적용 이유** : 일관된 따옴표 스타일을 유지하여 코드 가독성을 높이고, 팀원 간 코드 스타일 차이에 의한 불필요한 충돌을 줄임.
+- `semi`
+  - **적용 이유** : 모든 문장 끝에 세미콜론을 추가하여 코드가 자동으로 수정되는 경우 예기치 않은 오류를 방지. 
+- `no-console`
+  - **적용 이유** : console.log는 디버깅 용도로만 사용되며, 배포용 코드에서는 불필요한 로그가 남지 않도록 하기 위해 경고. 클린 코드와 성능 최적화에 도움.
+- `prefer-const`
+  - **적용 이유** : 재할당이 일어나지 않는 변수는 const로 선언하여 의도를 명확히 하고, 불필요한 재할당을 방지하여 코드의 안정성과 예측 가능성을 높임.
+- `no-multiple-empty-lines`
+  - **적용 이유** : 여러 개의 빈 줄을 제한하여 코드의 불필요한 공백을 줄이고, 코드가 깔끔하고 일관성 있게 유지.
 
-### 4.ESlint 규칙
 <br />
 
 ## UI Style Gide 💻
