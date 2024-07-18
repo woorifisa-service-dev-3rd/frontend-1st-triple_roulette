@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth Image Expansion</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #imageContainer {
+    position: relative;
+    width: 300px; /* 이미지 컨테이너의 너비 */
+    height: 300px; /* 이미지 컨테이너의 높이 */
+    overflow: hidden; /* 이미지 넘침 방지 */
+    transition: width 0.5s ease, height 0.5s ease; /* 변화를 부드럽게 만들기 위한 transition 효과 */
+  }
+
+  #expandingImage {
+    width: 100%; /* 이미지 초기 너비 */
+    height: auto; /* 이미지 높이 자동 조정 */
+    transition: width 0.5s ease; /* 이미지 크기 변경을 부드럽게 만들기 위한 transition 효과 */
+  }
+</style>
+</head>
+<body>
+
+<div id="imageContainer">
+  <img id="expandingImage" src="./img/jackpot_event1.png" alt="Expanding Image">
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const imageContainer = document.getElementById("imageContainer");
+    const expandingImage = document.getElementById("expandingImage");
+
+    // 이미지 컨테이너를 클릭할 때 이미지를 확장하는 함수
+    imageContainer.addEventListener("click", function() {
+      if (imageContainer.offsetWidth === 300) {
+        // 이미지를 크게 확장
+        imageContainer.style.width = "600px";
+        imageContainer.style.height = "600px";
+        expandingImage.style.width = "100%";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

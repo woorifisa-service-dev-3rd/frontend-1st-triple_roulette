@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.checked = false;
       toggle.style.cursor = "pointer";
       toggleBulb.style.cursor = "pointer";
-      
+
       buttonLabelList[0].style.cursor = "default";
       buttonLabelList[1].style.cursor = "default";
       buttonLabelList[2].style.cursor = "default";
@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buttonCheckboxes.forEach((button) => {
     button.addEventListener("click", function (e) {
+      const topic = document.querySelector("#triple_title");
+      if(topic.title === "주제를 선택하세요") {
+        e.preventDefault();
+      }
       if (!this.checked) {
         e.preventDefault();
-      } else {
-        console.log(e.target);
       }
     });
 
@@ -48,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonLabelList[0].style.cursor = "pointer";
       buttonLabelList[1].style.cursor = "pointer";
       buttonLabelList[2].style.cursor = "pointer";
+
+      const resultArea = document.querySelector("#triple_title");
+      resultArea.textContent = resultArea.title;
     }
   });
 
