@@ -1,3 +1,5 @@
+import { gameResultCheck } from "./game_result.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
   const toggle = document.getElementById("toggle");
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonLabelList[0].style.cursor = "default";
       buttonLabelList[1].style.cursor = "default";
       buttonLabelList[2].style.cursor = "default";
+
+      gameResultCheck();
     } else {
       toggle.checked = true;
     }
