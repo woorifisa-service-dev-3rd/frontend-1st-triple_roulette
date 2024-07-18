@@ -13,20 +13,37 @@
 
 .triple_wrap {
   position: relative;
-  background-color: #0e082d;
+  background: transparent;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  top: -150vh;
+  left: 0;
+  /* transition: all 3s ease; */
 }
 
 .triple_wrap_inner {
   position: relative;
   width: 85%;
   height: 92%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -48%);
+  z-index: 10;
 }
+
+.triple_wrap_background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background:transparent;
+} 
+
 
 /* 위 */
 
@@ -127,6 +144,7 @@
 }
 
 .triple_top_outside_text {
+  text-align: center;
   font: 400 2.4vw 'DungGeunMo';
   /* color: #fed128; */
   animation: neon 1s ease infinite;
@@ -340,4 +358,47 @@
 .seven_img {
   width: 60%;
   height: 78%;
+}
+
+/* triple_wrap_background_item */
+.triple_wrap_background_item {
+  position: absolute;
+}
+
+.item1Box{
+  bottom: 15px;
+  left: 50px;
+  width: 190px;
+  height: 224px;
+  animation: motion 1s infinite alternate ;
+}
+
+.item1Box_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/coin.png');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.item2Box{
+  bottom: 15px;
+  right:30px;
+  width: 200px;
+  height: 210px;
+  animation: motion 1s infinite alternate ;
+}
+
+.item2Box_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/coin2.png');
+  background-size: cover; 
+  background-position: center; 
 }

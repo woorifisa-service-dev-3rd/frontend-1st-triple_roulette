@@ -14,12 +14,17 @@
 }
 
 @media (min-width: 1000px) and (max-width: 1599px) {
-    /* .triple_top_outside_text {
-        font-size: 60px;
-    } */
+
 }
 
 @media (min-width: 550px) and (max-width: 999px) {
+    .triple_top_outside_text{
+        font: 400 2.4vw/20px 'DungGeunMo';
+    }
+
+    .item1Box_img,.triple_wrap_background_item{
+        display: none;
+    }
 
     ._board_btn_label {
         width: 80px;
@@ -43,6 +48,14 @@
 }
 
 @media (max-width: 550px) {
+    
+    .triple_top_outside_text{
+        font-size: 4vw;
+    }
+
+    .item1Box_img,.triple_wrap_background_item{
+        display: none;
+    }
 
     /* 상위 양 옆 버튼 */
 
@@ -173,4 +186,15 @@
         height: 7px;
         left: -5px;
     }
+
+    /* 게임 설명 모달 미디어  */
+    .modal_game_explain_content_text_comment {
+        font: 400 2vw/20px 'DungGeunMo';
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 23%;
+        align-items: center;
+      }
+      
 }

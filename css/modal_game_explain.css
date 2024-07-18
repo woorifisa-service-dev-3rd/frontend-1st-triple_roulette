@@ -11,7 +11,7 @@
 .modal_game_explain {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -87,11 +87,13 @@
   text-align: center;
   line-height: 85px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .modal_game_explain_img {
   width: 37px;
   height: 37px;
+  transition: all 0.5s;
 }
 
 .modal_game_explain_img:hover {
@@ -110,15 +112,19 @@
 
 
 .modal_game_explain_content_text_comment {
-  font: 400 1.8vw/100px 'DungGeunMo';
+  font: 400 1.5vw/50px 'DungGeunMo';
   display: flex;
   justify-content: space-between;
   width: 90%;
+  height: 23%;
+  align-items: center;
 }
 
-.modal_game_explain_content_text_comment>img {
-  height: 50px;
-}
+/* .modal_game_explain_content_text_comment>img  {
+  width: fit-content;
+} */
+
+
 
 .modal_game_explain_bottom {
   width: 98%;
