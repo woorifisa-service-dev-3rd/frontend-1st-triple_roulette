@@ -16,6 +16,8 @@ export function gameResultCheck() {
   const result1 = resultList[0].id;
   const result2 = resultList[1].id;
   const result3 = resultList[2].id;
+  console.log(result1, result2, result3, "?");
+  console.log(result1 == result3);
 
   /**
    * 게임 결과 알고리즘
