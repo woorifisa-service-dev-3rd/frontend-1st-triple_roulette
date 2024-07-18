@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       toggle.style.cursor = "default";
       toggleBulb.style.cursor = "default";
+      buttonLabelList[0].style.cursor = "default";
+      buttonLabelList[1].style.cursor = "default";
+      buttonLabelList[2].style.cursor = "default";
     }
   });
 
