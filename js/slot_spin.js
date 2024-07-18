@@ -26,10 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const topicList = [
           "당신의 미래에 배우자는?",
-          "당신의 미래에 직업은?",
           "숨겨둔 자산이 가장 많은 사람은?",
           "연애를 가장 많이 한 사람은?",
-          "닮은 사람은?",
         ];
 
         const topicDiv = document.querySelector("#triple_title");
@@ -91,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       resultArea.textContent = resultArea.title;
 
       reelsList.forEach((reel) => {
-        reel.style.backgroundImage = url("/img/slotreel.webp");
+        reel.style.backgroundImage = `url("../img/slotreel.webp")`;
         reel.style.filter = "blur(5px)";
         reel.style.animation = "spin 3s linear infinite";
         reel.style.animationPlayState = "running";

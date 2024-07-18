@@ -12,6 +12,8 @@ export const jackpotList = [
   "00_10",
   "00_11",
   "00_12",
+  "00_13",
+  "00_14",
 ];
 
 export const topicList = [
