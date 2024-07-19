@@ -62,14 +62,13 @@
   text-align: center;
 }
 .topic_choice {
-  width: fit-content;
-  font: 400 1.8vw/60px "DungGeunMo";
-  color: #faedc3;
-  display: block;
-  text-decoration: none;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, 0%);
+    width: fit-content;
+    font: 400 1.8vw / 80px "DungGeunMo";
+    color: #FAEDC3;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    left: 50%;    transform: translate(-50%, 0%)
 }
 .topic_choice::after {
   content: "";
