@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const topicDiv = document.querySelector("#triple_title");
     const topic = topicDiv.title;
-    let url = "./img/topic/";
-    let jackpotTest = "./img/topic/";
+    let url = "/img/topic/";
+    let jackpotTest = "/img/topic/";
     let num = -1;
 
     const nameList = [
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
           num += "02";
         }
 
-        reel.style.backgroundImage = `url("./img/slotreel${num}.png")`;
+        reel.style.backgroundImage = `url("/img/slotreel${num}.png")`;
         reel.style.filter = "blur(5px)";
         reel.style.animation = "spin 3s linear infinite";
         reel.style.animationPlayState = "running";
