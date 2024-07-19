@@ -60,12 +60,37 @@
 <br />
 
 ## Service Introduction 👀
-### Intro
-![intro](./gif/intro.gif)
-### Main
-![main](./gif/main.gif)
-### Click button
-![click](./gif/button.gif)
+ 1. **Intro** 
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+ 2. **Main-주제 선택**
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+ 3. **Main-버튼 클릭 시**
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+ 4. **Main-잭팟 터질 때**
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+ 5. **Main-게임 설명 UI**
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+ 6. **전체 반응형**
+<p align="left">
+  <img src="" width="700" height="400">
+</p>
+
+
 <br /><br />
 
 ## Team Rules 💬
