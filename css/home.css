@@ -13,7 +13,8 @@
 
 .triple_wrap {
   position: relative;
-  background: transparent;
+  /* background: transparent; */
+  background-color: #0E082D;
   width: 100vw;
   height: 100vh;
   /* display: flex; */
