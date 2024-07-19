@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     reel.style.animationPlayState = "running";
   });
 
-  // 덜컹거리면서 멈추는 효과
   function stopWithJerk(reel) {
     // 애니메이션 일시 중지
     reel.style.animationPlayState = "paused";
@@ -31,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const topicDiv = document.querySelector("#triple_title");
     const topic = topicDiv.title;
-    let url = "/frontend-1st-triple_roulette/img/topic/";
-    let jackpotTest = "/frontend-1st-triple_roulette/img/topic/";
+    let url = "/img/topic/";
+    let jackpotTest = "/img/topic/";
     let num = -1;
 
     const nameList = [
@@ -77,8 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
       let idx = Math.floor(Math.random() * 29);
       url += nameList[idx];
       jackpotTest += "유정호";
-      if(idx == 17 || idx == 18 || idx == 19 || idx == 20) reel.id = 1;
+      if(idx == 17 || idx == 18 || idx == 19 || idx == 20) reel.id = "유정호";
       else reel.id = nameList[idx];
+      // reel.id = 1;
     }
 
     // reel.id = 1;
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
           num += "02";
         }
 
-        reel.style.backgroundImage = `url("/frontend-1st-triple_roulette/img/slotreel${num}.png")`;
+        reel.style.backgroundImage = `url("/img/slotreel${num}.png")`;
         reel.style.filter = "blur(5px)";
         reel.style.animation = "spin 3s linear infinite";
         reel.style.animationPlayState = "running";
