@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let idx = Math.floor(Math.random() * 29);
       url += nameList[idx];
       jackpotTest += "유정호";
-      if(idx == 17 || idx == 18 || idx == 19 || idx == 20) reel.id = "유정호";
+      if(idx == 17 || idx == 18 || idx == 19 || idx == 20) reel.id = 1;
       else reel.id = nameList[idx];
     }
 
