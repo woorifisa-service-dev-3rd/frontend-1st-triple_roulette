@@ -45,7 +45,14 @@ topicChoice.forEach((topic) => {
     );
 
     reelsList.forEach((reel) => {
-      reel.style.backgroundImage = `url("/img/slotreel.webp")`;
+      const topicDiv = document.querySelector("#triple_title");
+      const topic = topicDiv.title;
+      let num = "";
+      if (topic != "당신의 미래에 배우자는?" && topic != "주제를 선택하세요") {
+        num += "02";
+      }
+
+      reel.style.backgroundImage = `url("/img/slotreel${num}.png")`;
       reel.style.filter = "blur(5px)";
       reel.style.animation = "spin 3s linear infinite";
       reel.style.animationPlayState = "running";
@@ -54,6 +61,6 @@ topicChoice.forEach((topic) => {
     const buttonCheckboxes = document.querySelectorAll("._board_btn_input");
     buttonCheckboxes.forEach((button) => {
       button.checked = false;
-    })
+    });
   });
 });
