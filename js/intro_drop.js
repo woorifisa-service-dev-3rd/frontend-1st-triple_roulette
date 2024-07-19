@@ -3,12 +3,12 @@ let wordBodies;
 let animationFrameId;
 
 const images = [
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin1.png" alt="">',
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin2.png" alt="">',
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin3.png" alt="">',
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin4.png" alt="">',
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin5.png" alt="">',
-  '<img class="dropCoin" src="./img/dropCoin/dropCoin6.png" alt="">'
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin1.png" alt="">',
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin2.png" alt="">',
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin3.png" alt="">',
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin4.png" alt="">',
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin5.png" alt="">',
+  '<img class="dropCoin" src="/frontend-1st-triple_roulette/img/dropCoin/dropCoin6.png" alt="">'
 ];
 
 const introDropCoinDiv = document.getElementById('intro_dropCoin_container');
