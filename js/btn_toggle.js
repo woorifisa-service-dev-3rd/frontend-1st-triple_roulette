@@ -21,40 +21,72 @@ document.addEventListener("DOMContentLoaded", function () {
     reel.style.animation = "none"; // 기존 애니메이션 제거
     reel.style.animation = "spin 0.2s ease-out"; // 짧은 시간 동안 느리게 회전
 
-        const topicList = [
-          "당신의 미래에 배우자는?",
-          "당신의 미래에 직업은?",
-          "숨겨둔 자산이 가장 많은 사람은?",
-          "연애를 가장 많이 한 사람은?",
-          "닮은 사람은?",
-        ];
+    const topicList = [
+      "당신의 미래에 배우자는?",
+      "당신의 미래에 직업은?",
+      "숨겨둔 자산이 가장 많은 사람은?",
+      "연애를 가장 많이 한 사람은?",
+      "닮은 사람은?",
+    ];
 
-        const topicDiv = document.querySelector("#triple_title");
-        const topic = topicDiv.title;
-        let url = "/img/topic/";
-        let num = -1;
+    const topicDiv = document.querySelector("#triple_title");
+    const topic = topicDiv.title;
+    let url = "/img/topic/";
+    let jackpotTest = "/img/topic/";
+    let num = -1;
 
-        if (topic == topicList[0]) url += "00_";
-        else if (topic == topicList[1]) url += "01_";
-        else if (topic == topicList[2]) {
-          url += "02_";
-          num = Math.floor(Math.random() * 34);
-        } else if (topic == topicList[3]) {
-          url += "03_";
-          num = Math.floor(Math.random() * 34);
-        } else if (topic == topicList[4]) url += "04_";
+    const nameList = [
+      "강세필",
+      "강재연",
+      "강현우",
+      "공예진",
+      "곽지은",
+      "구자빈",
+      "기남석",
+      "길가은",
+      "김민지",
+      "김창영",
+      "김호철",
+      "박서연",
+      "방성경",
+      "신원섭",
+      "안찬웅",
+      "오선민",
+      "유승아",
+      "유정호-1",
+      "유정호-2",
+      "유정호-3",
+      "유정호",
+      "이명렬",
+      "이성희",
+      "이현아",
+      "임지혁",
+      "정석진",
+      "조예은",
+      "최윤정",
+      "황순범",
+    ];
 
-        if (num == -1) {
-          num = Math.floor(Math.random() * 15);
-        }
+    if (topic == topicList[0]) {
+      url += "00_";
+      num = Math.floor(Math.random() * 15);
+      url += num;
+      jackpotTest += "00_0";
+      reel.id = num;
+    } else {
+      let idx = Math.floor(Math.random() * 29);
+      url += nameList[idx];
+      jackpotTest += "유정호";
+      if(idx == 17 || idx == 18 || idx == 19 || idx == 20) reel.id = "유정호";
+      else reel.id = nameList[idx];
+    }
 
-        // reel.style.backgroundImage = `url("${url}${num}.png")`;
-        reel.style.backgroundImage = `url("${url}1.png")`;
-        // reel.id = num;
-        reel.id = 1;
-        console.log("ee");
-        reel.style.animationPlayState = "paused"; // 멈추기
-        reel.style.filter = "blur(0px)";
+    // reel.id = 1;
+
+    reel.style.backgroundImage = `url("${url}.png")`;
+    // reel.style.backgroundImage = `url("${jackpotTest}.png")`;
+    reel.style.animationPlayState = "paused"; // 멈추기
+    reel.style.filter = "blur(0px)";
   }
 
   function checkButtons() {
@@ -109,7 +141,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log(reelsList);
       reelsList.forEach((reel) => {
-        reel.style.backgroundImage = `url("/img/slotreel.webp")`;
+        const topicDiv = document.querySelector("#triple_title");
+        const topic = topicDiv.title;
+        let num = "";
+        if (
+          topic != "당신의 미래에 배우자는?" &&
+          topic != "주제를 선택하세요"
+        ) {
+          num += "02";
+        }
+
+        reel.style.backgroundImage = `url("/img/slotreel${num}.png")`;
         reel.style.filter = "blur(5px)";
         reel.style.animation = "spin 3s linear infinite";
         reel.style.animationPlayState = "running";
