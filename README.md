@@ -2,17 +2,17 @@
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/bw02184">
+      <a href="https://github.com/qbobl5">
         <b>팀장 김혜빈</b>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/seonmin5">
+      <a href="https://github.com/hyeri1126">
         <b>팀원 류혜리</b>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/SeungAh-Yoo99">
+      <a href="https://github.com/doyi0107">
         <b>팀원 이도이</b>
       </a>
     </td>
