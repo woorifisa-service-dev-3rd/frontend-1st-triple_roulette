@@ -52,7 +52,7 @@ topicChoice.forEach((topic) => {
         num += "02";
       }
 
-      reel.style.backgroundImage = `url("./img/slotreel${num}.png")`;
+      reel.style.backgroundImage = `url("/img/slotreel${num}.png")`;
       reel.style.filter = "blur(5px)";
       reel.style.animation = "spin 3s linear infinite";
       reel.style.animationPlayState = "running";
