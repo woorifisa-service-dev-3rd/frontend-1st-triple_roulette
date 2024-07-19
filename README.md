@@ -62,7 +62,7 @@
 ## Service Introduction 👀
  1. **Intro** 
 <p align="left">
-  <img src="" width="700" height="400">
+  <img src="https://github.com/user-attachments/assets/31605c9f-6fc7-413b-b037-d4c214169cfa" width="700" height="400">
 </p>
 
  2. **Main-슬롯 스핀 기능**
@@ -70,14 +70,14 @@
   <img src="https://github.com/user-attachments/assets/524de66d-4852-4aaa-a498-dab4e63a57cd" width="700" height="400">
 </p>
 
- 3. **Main-버튼 클릭 시**
+ 3. **Main-주제 선택**
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/7b820a44-30d8-4a63-a665-8aa53ce23785" width="700" height="400">
+  <img src="https://github.com/user-attachments/assets/72dfe677-ce0f-422c-a180-af0dca36d6df" width="700" height="400">
 </p>
 
- 4. **Main-잭팟 터질 때**
+ 4. **Main-버튼 클릭 시**
 <p align="left">
-  <img src="" width="700" height="400">
+  <img src="https://github.com/user-attachments/assets/7b820a44-30d8-4a63-a665-8aa53ce23785" width="700" height="400">
 </p>
 
  5. **Main-게임 설명 UI**
@@ -85,9 +85,9 @@
   <img src="https://github.com/user-attachments/assets/a4822934-cbcd-4bf0-a77e-95db0f04df79" width="700" height="400">
 </p>
 
- 6. **전체 반응형**
+ 6. **전체 반응형 및 잭팟**
 <p align="left">
-  <img src="" width="700" height="400">
+  <img src="https://github.com/user-attachments/assets/dbb3b994-3986-4166-9475-0ba85913510c" width="300" height="500">
 </p>
 
 
