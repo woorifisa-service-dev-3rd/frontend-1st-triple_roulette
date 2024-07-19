@@ -12,7 +12,7 @@ export function gameResultCheck() {
   const topicDiv = document.querySelector("#triple_title");
   const topic = topicDiv.innerHTML;
   topicDiv.title = topic;
-  const resultList = document.querySelectorAll(".seven_img");
+  const resultList = document.querySelectorAll(".triple_middle_outside_gold_box_inner");
   const result1 = resultList[0].id;
   const result2 = resultList[1].id;
   const result3 = resultList[2].id;
@@ -21,7 +21,6 @@ export function gameResultCheck() {
    * 게임 결과 알고리즘
    */
   let gameResult = 0; // 최종 게임 결과
-  console.log(topic);
 
   if (result1 == result2 && result1 == result3) {
     if (topic == topicList[2] || topic == topicList[3]) {
@@ -29,7 +28,7 @@ export function gameResultCheck() {
     } else {
       for (let i = 0; i < jackpotList.length; i++) {
         if (result1 < jackpotList[i]) break; // 코드 효율을 위해 현재 배열의 문자열이 기본 문자열보다 큰 경우 break
-        if (jackpotList[i] === result1) {
+        if (jackpotList[i] == result1) {
           gameResult = 1;
           break; // 현재 img id 가 jackpot 결과인 경우 break
         } // 모두 일치는 하지만 jackpot 은 아닌 경우
@@ -44,13 +43,13 @@ export function gameResultCheck() {
 
   if (gameResult === 1) {
     // 3가지 일치 and jackpot
-    resultArea.textContent = "🤑 jackpot 🤑";
+    resultArea.textContent = "🤑 JACKPOT 🤑";
     jackpotEvent();
   } else if (gameResult === 0) {
     // 3가지 일치 but not jackpot
-    resultArea.textContent = "🤗 Good!";
+    resultArea.textContent = "🤗 Good 🤗";
   } else if (gameResult === -1) {
     // 3가지 불일치
-    resultArea.textContent = "😂 Dud..";
+    resultArea.textContent = "😂 Dud 😂";
   }
 }

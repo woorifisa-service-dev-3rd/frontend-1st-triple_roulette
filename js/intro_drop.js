@@ -2,20 +2,23 @@ let engine;
 let wordBodies;
 let animationFrameId;
 
-const splitWords = () => {
-  const textNode = document.querySelector(".intro_text");
-  const text = textNode.textContent;
-  const newDomElements = text.split(" ").map((text) => {
-    const highlighted =
-      text.startsWith(`강사님`) ||
-      text.startsWith(`미래연봉은`) ||
-      text.startsWith(`100만원`);
-    return `<span class="word ${
-      highlighted ? "highlighted" : null
-    }">${text}</span>`;
+const images = [
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin1.png" alt="">',
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin2.png" alt="">',
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin3.png" alt="">',
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin4.png" alt="">',
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin5.png" alt="">',
+  '<img class="dropCoin" src="/img/dropCoin/dropCoin6.png" alt="">'
+];
+
+const introDropCoinDiv = document.getElementById('intro_dropCoin_container');
+
+for (let i = 0; i < 30; i++) {
+  images.forEach(image => {
+    introDropCoinDiv.innerHTML += image;
   });
-  textNode.innerHTML = newDomElements.join("");
-};
+}
+
 
 const renderCanvas = () => {
   const Engine = Matter.Engine;
@@ -73,14 +76,14 @@ const renderCanvas = () => {
     50,
     params
   );
-  const wordElements = document.querySelectorAll(".word");
+  const wordElements = document.querySelectorAll(".dropCoin");
   const wordBodies = [...wordElements].map((elemRef) => {
     const width = elemRef.offsetWidth;
     const height = elemRef.offsetHeight;
 
-    const initialVelocityX = Math.random() * 20 +  20; // 범위: -1에서 1 사이의 랜덤 값
-    const initialVelocityY = Math.random() * 10 + 10; // 범위: 1에서 3 사이의 랜덤 값
-    const initialAngle = Math.random() * Math.PI * 0.5; // 0에서 2π(360도) 사이의 랜덤 각도
+    const initialVelocityX = Math.random() * 2 - 1; // 범위: -1에서 1 사이의 랜덤 값
+    const initialVelocityY = Math.random() * 3 + 1; // 범위: 1에서 3 사이의 랜덤 값
+    const initialAngle = Math.random() * Math.PI ; // 0에서 2π(360도) 사이의 랜덤 각도
 
     return {
       body: Matter.Bodies.rectangle(canvasSize.width / 2, 0, width, height, {
@@ -92,6 +95,8 @@ const renderCanvas = () => {
           y: initialVelocityY,
         },
         angle: initialAngle,
+        friction: 0.1, // 마찰력 추가
+        restitution: 0.5 // 반발력 추가
       }),
       elem: elemRef,
       render() {
@@ -138,6 +143,7 @@ const renderCanvas = () => {
       });
       introClick.style.opacity = "0";
       dropSection.style.top = "0";
+      dropSection.style.transition = "top 3s ease";
 
      
       // Matter.js 엔진 삭제를 3초 후에 실행
@@ -166,6 +172,6 @@ const clearMatterEngine = (engine, wordBodies, animationFrameId) => {
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  splitWords();
+  // splitWords();
   renderCanvas();
 });

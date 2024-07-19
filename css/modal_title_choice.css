@@ -115,16 +115,33 @@
   .title_choice_subtitle {
     font-size: 4vw;
   }
-  .modal_game_explain_bottom > p,
-  .modal_game_explain_content_close {
-    font-size: 3vw;
+
+  .modal_game_explain_content_text {
+    height: 70%;
   }
+
+
+  .title_choice_content_bottom > p {
+    font: 400 3vw "DungGeunMo";
+  }
+
+  .modal_title_choice_content_wrap{
+      height: 50%;
+  }
+
+
   /* 게임 설명 모달 미디어  */
   .topic_choice {
-    font: 400 3.5vw/25px "DungGeunMo";
+    font: 400 3.3vw/40px "DungGeunMo";
     text-align: left;
   }
+
+
   .modal_game_explain_content_text_comment > img {
     display: none;
+  }
+
+  .title_choice_content_middle_wrap {
+    height: 90%;
   }
 }

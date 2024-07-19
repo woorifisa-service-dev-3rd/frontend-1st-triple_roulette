@@ -122,7 +122,7 @@
 .triple_top_text_left_circle {
   width: 62%;
   height: 25%;
-  background-color: #fed128;  
+  background-color: #fed128;
   border-radius: 50%;
   box-shadow: inset 0 0 0 4px #fdec6a, 0 0 5px 3px #bca83c, 0 0 13px 7px #a1664a;
 }
@@ -142,7 +142,7 @@
 
 .triple_top_outside_text {
   text-align: center;
-  font: 400 2.4vw 'DungGeunMo';
+  font: 400 2.4vw "DungGeunMo";
   /* color: #fed128; */
   animation: neon 1s ease infinite;
   -moz-animation: neon 1s ease infinite;
@@ -290,10 +290,10 @@
   color: #9f0f1c;
   animation: sparkle 1s infinite;
 }
-.triple_middle_outside_gold_box_inner{
+.triple_middle_outside_gold_box_inner {
   width: 100%;
   height: 100%;
-  background-image: url('/img/slotreel.webp');
+  background-image: url("/img/slotreel.png");
   background-repeat: repeat-y;
   background-position: 0 0;
   position: relative;
@@ -378,7 +378,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/img/coin.png");
+  background-image: url("/img/coin1.png");
   background-size: cover;
   background-position: center;
 }
@@ -414,4 +414,22 @@
   width: 100%; /* 이미지 초기 너비 */
   height: auto; /* 이미지 높이 자동 조정 */
   transition: width 0.5s ease; /* 이미지 크기 변경을 부드럽게 만들기 위한 transition 효과 */
+}
+
+@keyframes spin {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -9999px; /* 무한히 회전하는 효과를 위해 적절한 값으로 설정 */
+  }
+}
+
+.triple_middle_outside_gold_box_inner {
+  width: 100%;
+  height: 100%;
+  animation: spin 3s linear infinite; /* 애니메이션 지속 시간을 줄임 */
+  filter: blur(2px); /* 내용물 블러 처리 최적화 */
+  will-change: transform; /* 애니메이션을 예상할 때 브라우저에 미리 알림 */
+  transform: translateZ(0); /* GPU 가속을 위해 3D 변환을 사용 */
 }

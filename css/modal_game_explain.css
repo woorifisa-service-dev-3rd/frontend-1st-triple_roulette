@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 #open_modal_game_explain {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 30px;
   border: 2.5px solid #dbab51;
@@ -166,13 +166,7 @@
     display: none;
   }
 }
-4: 23 @font-face {
-  font-family: "DungGeunMo";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 .modal_game_explain {
   display: none;
   position: fixed;
@@ -334,13 +328,7 @@
     display: none;
   }
 }
-4: 23 @font-face {
-  font-family: "DungGeunMo";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
 .modal_game_explain {
   display: none;
   position: fixed;
@@ -403,7 +391,7 @@
   cursor: pointer;
 }
 #open_modal_game_explain {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 30px;
   border: 2.5px solid #dbab51;
@@ -445,19 +433,25 @@
   text-align: center;
 }
 /* 이미지 크기 비율을 유지하면서 반응형으로 설정 */
-.modal_game_explain_content_text_comment:nth-child(1) img,
-.modal_game_explain_content_text_comment:nth-child(4) img {
-  width: 20%;
-  /* 1, 4번째 이미지 너비 조정 */
+.modal_game_explain_content_text_comment:nth-child(1) img{
+  width: 19%;
+  height: 45%;
 }
-.modal_game_explain_content_text_comment:nth-child(2) img,
-.modal_game_explain_content_text_comment:nth-child(3) img {
-  width: 5%;
-  /* 2, 3번째 이미지 너비 조정 */
+
+.modal_game_explain_content_text_comment:nth-child(2) img {
+  width: 4%;
 }
+
 .modal_game_explain_content_text_comment:nth-child(3) img {
+  width: 3%;
   height: 100%;
 }
+
+.modal_game_explain_content_text_comment:nth-child(4) img {
+  width: 23%;
+}
+
+
 .modal_game_explain_bottom {
   width: 98%;
   text-align: center;
@@ -471,6 +465,10 @@
   width: 50px;
 }
 @media (max-width: 700px) {
+  .modal_game_explain_content_text{
+      padding-bottom: 20px;
+  }
+
   #open_modal_game_explain {
     width: 45px;
     height: 45px;
@@ -491,11 +489,14 @@
   }
   .modal_game_explain_bottom > p,
   .modal_game_explain_content_close {
-    font-size: 3vw;
+    font-size: 2.8vw;
+  }
+  .modal_game_explain_content{
+    height: 50%;
   }
   /* 게임 설명 모달 미디어  */
   .modal_game_explain_content_text_comment {
-    font: 400 3.5vw/30px "DungGeunMo";
+    font: 400 3.2vw/30px "DungGeunMo";
     text-align: left;
   }
   .modal_game_explain_content_text_comment > img {

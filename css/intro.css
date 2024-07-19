@@ -43,15 +43,11 @@ canvas {
   /* width: 100vw; */
   /* height: 100vh; */
 }
-.word {
+.dropCoin {
   position: absolute;
   cursor: grab;
-  font-size: 30px;
-  /* font-family: 'EF_jejudoldam'; */
-  font-family: 'HSSaemaul-Regular';
-  /* font-family: "Freesentation-9Black"; */
-
-  color: #edd799;
+  width: 40px;
+  height: 40px;
 }
 .word.highlighted {
   font-weight: bold;
@@ -72,52 +68,4 @@ a {
   top: 30px;
   color: white;
   transition: opacity 1s ease;
-}
-
-.main {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: -100vh;
-  left: 0;
-  position: absolute;
-  transition: all 1s ease;
-  /* background-color: green; */
-  background-color: #0e082d;
-}
-
-.imgBox{
-  width: 330px;
-  height: 300px;
-  position: absolute;
-}
-.imgBox.left{
-  left: 100px;
-  bottom: 100px;
-  /* transform: rotateX(30deg) rotateY(33deg); */
-}
-.imgBox.right{
-  right: 100px;
-  top: 100px;
-}
-.coinImg{
-  width: 100%;
-  height: 100%;
-
-}
-
-.leftCoin{
-  /* transform: perspective(200px) rotateX(-45deg); */
-  animation: motion 1s infinite alternate ;
-}
-
-@keyframes motion {
-  0%{
-    transform: translate(0,0);
-  }
-  100%{
-    transform: translate(0,10px);
-  }
 }
